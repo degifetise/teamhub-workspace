@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@theme { --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif; }
+body { background: #f7f7f5; color: #202020; transition: background-color .2s, color .2s; }
+button { cursor: pointer; }
+.card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm; }
+.input { @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100; }
+.btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50; }
+.btn-ghost { @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50; }
+
+/* ---------- Dark mode: toggled by the "dark" class on <html> ---------- */
+.dark { color-scheme: dark; }
+.dark body { background: #191919; color: #e7e7e5; }
+.dark .bg-white, .dark .card { background-color: #161616; }
+.dark .bg-slate-50, .dark .hover\:bg-slate-50:hover { background-color: #1d1d1d; }
+.dark .bg-slate-100, .dark .hover\:bg-slate-100:hover { background-color: #242424; }
+.dark .border-slate-200, .dark .border-slate-100, .dark .divide-slate-100 > * { border-color: #303030; }
+.dark .text-slate-900, .dark .text-slate-700 { color: #e7e7e5; }
+.dark .text-slate-600, .dark .text-slate-500 { color: #a3a3a3; }
+.dark .text-slate-400 { color: #777; }
+.dark .input { background-color: #202020; border-color: #383838; color: #e7e7e5; }
+.dark .btn-ghost { background-color: #202020; border-color: #383838; color: #e7e7e5; }
+.dark .bg-blue-50, .dark .bg-blue-100 { background-color: rgba(37, 99, 235, .18); }
+.dark .bg-amber-50, .dark .bg-amber-100 { background-color: rgba(245, 158, 11, .16); }
+.dark .bg-red-50, .dark .bg-red-100 { background-color: rgba(239, 68, 68, .16); }
+.dark .bg-emerald-50, .dark .bg-emerald-100 { background-color: rgba(16, 185, 129, .16); }
+.dark .bg-violet-50, .dark .bg-violet-100 { background-color: rgba(139, 92, 246, .18); }
+.dark .bg-white\/70 { background-color: rgba(22, 22, 22, .72); }
+.dark .text-blue-600 { color: #7aaeff; }
+.dark .bg-blue-600, .dark .btn { color: #fff; }
+.dark .text-blue-700 { color: #9dc2ff; }
+.dark .text-amber-800 { color: #fcd34d; }
+.dark .text-red-600, .dark .text-red-500 { color: #f87171; }
+.dark .bg-slate-100.h-1, .dark .bg-slate-100.h-1\.5 { background-color: #303030; }
